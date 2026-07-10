@@ -2,16 +2,13 @@
 
 **Question:** How do you create a proxy PDB, and how do they behave with transactions and containers?
 
-**Answer:**
-
-Although the session was changed to `PDB01_PROXY`, the `SHOW CON_NAME` command displays `PDB01`. This occurs because the proxy PDB redirects the session to the source PDB.
+**Answer:** Although the session was changed to `PDB01_PROXY`, the `SHOW CON_NAME` command displays `PDB01`. This occurs because the proxy PDB redirects the session to the source PDB.
 
 Any SQL executed through the proxy PDB is submitted to the source PDB. The source PDB is therefore responsible for processing the SQL and managing the associated undo and redo.
 
 Database initialization parameters should be changed by connecting directly to the source PDB rather than through the proxy PDB.
 
 Session-level settings are established by the client session. For example, if a client connects from New York to a proxy PDB hosted in California, the session time zone can be set to New York. However, values such as `DBTIMEZONE`, `SYSTIMESTAMP`, and `SYSDATE` remain associated with the database or operating system environment hosting the source PDB.
-
 
 
 First, create the source PDB.
