@@ -1,7 +1,9 @@
 # About Proxy PDBs
 
 **Question:** How do you create a proxy PDB, and how do they behave with transactions and containers?
+
 **Answer:**
+
 Although the session was changed to `PDB01_PROXY`, the `SHOW CON_NAME` command displays `PDB01`. This occurs because the proxy PDB redirects the session to the source PDB.
 Any SQL executed through the proxy PDB is submitted to the source PDB. The source PDB is therefore responsible for processing the SQL and managing the associated undo and redo.
 Database initialization parameters should be changed by connecting directly to the source PDB rather than through the proxy PDB.
