@@ -131,7 +131,7 @@ alter pluggable database application APP_ROOT1 end patch 100;
 
 **Question:** How do you create an application PDB seed?
 
-**Answer:** Use the `AS SEED` option when creating the PDB. Be sure to open the seed, sync it, and return it to read-only.
+**Answer:** Use the `AS SEED` option when creating the PDB. Be sure to open the seed, sync it, and return it to read-only. You must be connected to the application root.
 
 ```sql
 create pluggable database as seed
