@@ -285,6 +285,7 @@ ORA-02298: cannot validate (TEST_USER.FK01TEST2) - parent keys not found
 *Action:   Obvious
 ```
 
+---
 Question: What is another way around this error - where constraints keep failing but yet we must sync the Application PDB to the application?
 
 Answer: We can store the problem records into a temporary backup table, delete the failing records, and then resync the PDB.
