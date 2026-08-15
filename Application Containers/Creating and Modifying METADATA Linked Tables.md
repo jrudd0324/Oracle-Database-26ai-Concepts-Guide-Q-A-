@@ -172,18 +172,12 @@ alter pluggable database application test1 sync;
 
 ```
 Error starting at line : 144 in command -
-```
-
-```
 alter pluggable database application test1 sync
-```
-
-```
 Error report -
 ORA-02298: cannot validate (TEST_USER.FK01TEST2) - parent keys not found
 02298. 00000 - "cannot validate (%s.%s) - parent keys not found"
 *Cause:    an alter table validating constraint failed because the table has
-    child records.
+           child records.
 *Action:   Obvious
 ```
 
@@ -205,7 +199,6 @@ from dba_applications;
 
 ```
 APP_NAME   APP_VERSION  APP_STATUS          
----------- ------------ --------------------
 TEST1      1.0          UPGRADING           
 ```
 
