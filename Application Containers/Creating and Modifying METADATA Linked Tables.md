@@ -122,7 +122,7 @@ alter session set container = APP_ROOT1;
 ```
 ---
 
-Question: What happens if we add a primary key to table1 and a foreign key to table2 to table1
+Question: What happens if we add a primary key to table1 and a foreign key to table2 to table1  
 Answer: So we can create the constraint - but the application will evaluate the constraints accordingly. 
 
 ```
