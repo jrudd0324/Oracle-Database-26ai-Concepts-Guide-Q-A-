@@ -184,6 +184,7 @@ ORA-02298: cannot validate (TEST_USER.FK01TEST2) - parent keys not found
 ---
 
 Question: Since the application sync errored out - is it fully synced or not?
+
 Answer: It does not appear that the application is fully synced based on the below query and it's output.
 
 ```
