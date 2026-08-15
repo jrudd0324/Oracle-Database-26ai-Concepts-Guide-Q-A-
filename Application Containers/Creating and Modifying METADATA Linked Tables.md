@@ -176,6 +176,7 @@ Error starting at line : 144 in command -
 
 ```
 alter pluggable database application test1 sync
+```
 
 ```
 Error report -
