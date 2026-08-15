@@ -285,6 +285,12 @@ ORA-02298: cannot validate (TEST_USER.FK01TEST2) - parent keys not found
 *Action:   Obvious
 ```
 
+Question: What is another way around this error - where constraints keep failing but yet we must sync the Application PDB to the application?
+
+Answer: We can store the problem records into a temporary backup table, delete the failing records, and then resync the PDB.
+
+Note: Deleting the records is not the only option - for this specific scenario you can set the Foreign Key column values to null, you can set them to a proper parent key, etc. 
+
 ```
 alter session set container = CUST1;
 ```
@@ -336,7 +342,7 @@ alter pluggable database application test1 sync;
 ```
 Pluggable database APPLICATION altered.
 ```
-
+Verifying that the application is synced after changes were made:
 ```
 col app_name format a10;
 col app_version format a12;
